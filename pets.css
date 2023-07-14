@@ -1,0 +1,436 @@
+@font-face {
+  font-family: "Georgia";
+  src: url(fonts/static/NotoSerifGeorgian/NotoSerifGeorgian-Regular.ttf) format('truetype');
+  font-weight: 400; 
+}
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.conteiner {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.burger {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 120px;
+  padding: 0 2.3%;
+  background-color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-title {
+  font-family: "Georgia";
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: #545454;
+}
+
+.logo-subtitle {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  color:#292929;
+}
+
+.header-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 35px;
+  justify-content: space-evenly;
+  align-content: center;
+  justify-items: center;
+  list-style-type: none;
+}
+
+.header-link {
+  font-family: "Arial";
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: #545454;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 2px solid #F1CDB3;
+}
+
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #1A1A1C;
+}
+
+.menu-list-item:hover,
+.header-list-item:hover {
+  transform: scale(1.1);
+}
+
+.adaptive-box {
+  position: fixed;
+  top: 15%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(242, 242, 247, 0.6);
+  z-index: 1;
+  transition: all 0.8s ease 0s;
+}
+
+.adaptive-menu {
+  width: 320px;
+  height: 100vh;
+  padding-top: 50px;
+  background-color: #f0f0f4;
+  position: fixed;
+  top: 15%;
+  right:0;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+  transform: translate(100%, 0px);
+}
+
+.section-pets {
+  width: 100%;
+  background-color: #F6F6F6;
+  min-height: 1342px;
+  /*padding: 80px 40px 100px;*/
+}
+
+.pets-title {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: #545454;
+  width: 30.25%;
+  height: 6.7%;
+  margin: 0 auto;
+}
+
+.card-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap:30px;
+  padding: 45px 40px;
+}
+
+.card {
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 435px;
+  border: 1px solid #FAFAFA;
+}
+
+.name-pet {
+  font-family: "Georgia";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.42rem;
+  color: #545454;
+}
+
+.card-button {
+  font-family: "Georgia";
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  width: 187px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  color: #292929;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+}
+
+.arrow-left {
+  border: 1px solid #CDCDCD;
+}
+
+.arrow-right {
+  border: 1px solid #F1CDB3;
+}
+
+.number {
+  background-color: #F1CDB3;
+  border: 1px solid #F1CDB3;
+}
+
+@media screen and (max-width:768px) {
+  .pets-title {
+    width: 300px;
+    height: 64px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .header-list {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .section-pets {
+    padding: 60px 30px 70px;
+    min-height: 1733px;
+  }
+
+  .scarlett,
+  .freddie {
+    display: none;
+  }
+
+  .card-box {
+    justify-content: space-evenly;
+    padding: 30px 0 40px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .pets-title {
+    width: 300px;
+    height: 64px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .header-list {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .section-pets {
+    padding: 42px 10px;
+    min-height: 1649px;
+  }
+
+  .sophia,
+  .timmy,
+  .charly,
+  .scarlett,
+  .freddie {
+    display: none;
+  }
+
+  .card-box {
+    padding: 42px 25px;
+  }
+
+}
+
+
+
+
+.footer {
+  position: relative;
+  min-height: 350px;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(farthest-side at 0% 100%, #513D2F, #1A1A1C);
+}
+
+.footer-contacts,
+.footer-location {
+  position: absolute;
+  top: 16%;
+  left: 3.1%;
+  right: 75.2%;
+  bottom: 17.1%;
+  display: flex;
+  flex-direction: column;
+  gap: 11.4%;
+}
+
+.footer-location {
+  position: absolute;
+  top: 16%;
+  left: 37.3%;
+  right: 39.1%;
+  bottom: 17.1%;
+}
+
+.footer-image {
+  position: absolute;
+  top: 11.4%;
+  left: 73.4%;
+  right: 3.1%;
+  bottom: 0;
+  background-image: url(pictures/footer-puppy.png);
+  width: 23.4%;
+  height: 88.6%;
+}
+
+.contact-title,
+.location-title {
+  font-family: "Georgia";
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: #FFFFFF;
+}
+.email-link,
+.phone-link,
+.boston-link,
+.london-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.email,
+.phone-number,
+.address {
+  font-family: "Georgia";
+  font-size: 1.25rem;
+  line-height: 1.4rem;
+  color: #F1CDB3;
+}
+
+@media screen and (max-width:1240px) {
+  .footer {
+    min-height: 639px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .footer-image {
+   width: 39%;
+   height: 48.5%;
+    background-size: cover;
+    top: 51.5%;
+    right: 30.5%;
+    left: 30.5%;
+    bottom: 0;
+  }
+
+  .footer-contacts {
+    top: 6.3%;
+    bottom: 58.7%;
+    left: 8.3%;
+    right: 55.5%;
+  }
+
+  .footer-location {
+    top: 6.3%;
+    bottom: 58.7%;
+    left: 52.3%;
+    right: 8.3%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .footer-image {
+     right: 15%;
+     left: 45%;
+   }
+
+  .footer-location{
+    top: 45%;
+    left: 8.3%;
+    right: 55.5%;
+  }
+}
+
+@media screen and (max-width:763px) {
+  .footer {
+    min-height: 809px;
+    height: 100%;
+  }
+
+  .footer-image {
+    width: 260px;
+    height: 269px;
+    top: 66.7%;  
+  }
+
+  .footer-contacts {
+    top: 3.7%;
+    left: 6.6%;
+  }
+
+  .footer-location {
+    top: 34.3%;
+    left: 6.6%;
+  }
+
+  .contact-title,
+  .location-title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  .email,
+  .address {
+    font-size: 1.25rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width:570px) {
+  .footer-image {
+    left: 9.4%;
+    right: 9.4%;
+  }
+
+  .footer-location,
+  .footer-contacts {
+    right: 3.4%;
+    left: 3.4%;
+  }
+
+}
